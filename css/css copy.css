@@ -1,0 +1,479 @@
+:root {
+	--primColor: #c6d1dd;
+	--secoColor: #555555;
+	--cornerRad: 4px;
+  }
+  body {
+	background-color: var(--primColor);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+  }
+  details {
+	margin: 40px;
+  }
+  summary {
+	writing-mode: vertical-lr;
+	text-align: center;
+	padding: 12px 12px;
+	width: 23px;
+	height: 32px;
+	background-color: var(--primColor);
+	border: 2px solid var(--secoColor);
+	border-radius: var(--cornerRad);
+	color: var(--secoColor);
+	cursor: pointer;
+	user-select: none;
+	outline: none;
+	transition: transform 400ms ease-in-out 0s;
+  }
+  summary::before,
+  summary::after {
+	position: static;
+	top: 0;
+	left: 0;
+  }
+  summary::before {
+	content: "";
+  }
+  summary::after {
+	content: "I I I";
+	letter-spacing: -1px;
+  }
+  summary:hover {
+	transform: scale(1.1);
+  }
+  summary::marker {
+	font-size: 0;
+  }
+  summary::-webkit-details-marker {
+	display: none;
+  }
+  details[open] .menu {
+	animation-name: menuAnim;
+  }
+  details[open] summary::before {
+	content: "X";
+  }
+  details[open] summary::after {
+	content: "";
+  }
+  .menu {
+	height: 0;
+	width: fit-content;
+	border-radius: var(--cornerRad);
+	background-color: var(--primColor);
+	box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+	margin-top: 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	animation: closeMenu 300ms ease-in-out forwards;
+  }
+  .menu a {
+	padding: 6px 24px;
+	margin: 0 8px;
+	color: var(--secoColor);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+	text-decoration: none;
+	text-align: center;
+	transition: filter 200ms linear 0s;
+  }
+  .menu a:nth-of-type(1) {
+	padding-top: 24px;
+  }
+  .menu a:nth-last-of-type(1) {
+	border-bottom: none;
+  }
+  .menu a:hover {
+	filter: brightness(200%);
+  }
+  details::before {
+	content: "";
+	color: var(--secoColor);
+	position: absolute;
+	margin-left: 50px;
+	padding: 10px 10px;
+	opacity: 0.4;
+  }
+  details[open]::before {
+	animation: fadeMe 300ms linear forwards;
+  }
+  @keyframes menuAnim {
+	0% {
+	  height: 0;
+	}
+	100% {
+	  height: 240px;
+	}
+  }
+  @keyframes fadeMe {
+	0% {
+	  opacity: 0.4;
+	}
+	100% {
+	  opacity: 0;
+	}
+  }
+  
+  .nav_menu {
+	position: absolute;
+	text-align: left;
+	margin: 2%;
+	width: 100%;
+	z-index: 999;
+	font-family: rampart one;
+}
+  
+
+.cim {
+	background-color: #253237;
+	color: #c2dfe3;
+	border: 2px solid #253237;
+	border-radius: 10px;
+	padding: 16px;
+	margin: 8px;
+	text-align: center;
+	font-family: rampart one;
+	font-size: 150%;
+}
+
+.rolam {
+	border: 2px solid #c2dfe3;
+	background-color: #c2dfe3;
+	border-radius: 10px;
+	text-align:center;
+	padding: 10px;
+	height: auto;
+}
+
+.kepszoveg {
+	display: flex;
+	justify-content: center;
+ align-items: center; /* új sor */
+ align-content: center;
+
+	color: #414350;
+	background-color:--primColor;
+	border: 2px solid #5c6b73;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+
+}
+
+.magamrol {
+    border: 0px solid #c2dfe3;
+    background-color: #c2dfe3;
+    border-radius: 10px;
+    flex: 1;
+
+    padding: 10px;
+    height: 350px;
+	text-align: left;
+}
+
+.kep {
+    flex: 1;
+	text-align: left;
+}
+
+.kep img {
+    border-radius: 10px;
+    
+    height: 400px;
+	width: auto;
+}
+
+
+
+
+
+.tema {
+	background-color: #005567;
+	border: 2px solid #005567;
+	border-radius: 10px;
+	padding: 16px;
+	margin: 8px;
+	text-align: center;
+	color:  #c6d1dd;
+	font-family: 'Source Serif Pro', serif;
+}
+
+.tema a {
+	text-decoration: none;
+	color: #9db4c0;
+}
+
+.kep12 img
+{
+	display: block;
+	width: auto;
+	height: 200px;
+	border-radius: 10px;
+	padding:2px; 
+	
+
+}
+
+.kep12 {
+	display: inline-flex;
+}
+
+
+
+.muv {color: #414350;
+	background-color: #5c6b73;
+	border: 2px solid #5c6b73;
+	border-radius: 10px;
+	padding: 16px;
+	margin: 8px;
+}
+
+.alcim {background-color: #253237;
+	border: 2px solid #253237;
+	border-radius: 10px;
+	padding: 2px;
+	margin:1px;
+	text-align: center;
+	font-family: 'Source Serif Pro', serif;
+	color: #c2dfe3 ;
+	
+}
+
+.alcim img {
+	display: inline;
+	width: 25%;
+	height: auto;
+	border-radius: 10px;
+}
+
+.kep13 img {
+	display: inline;
+	width: 20%;
+	height: auto;
+	border-radius: 10px;
+	padding: 2px;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+body {
+  font: 100% Roboto, sans-serif;
+  background: url(http://wallpapercave.com/wp/aZlqiAT.png) 50% 50% no-repeat;
+  background-size: cover;
+  padding: 50px;
+  margin: 0;
+}
+
+nav {
+  width: 300px;
+  background: white;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-clip-path: circle(24px at 30px 24px);
+  clip-path: circle(24px at 32px 24px);
+  -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+  transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+}
+
+nav:hover {
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.75s;
+  transition-duration: 0.75s;
+  -webkit-clip-path: circle(390px at 225px 24px);
+  clip-path: circle(390px at 150px 24px);
+}
+
+a {
+  display: block;
+  line-height: 50px;
+  padding: 0 20px;
+  color: inherit;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a:hover { background: #ffe082; }
+
+a:active { background: #ffca28; }
+
+.navicon {
+  padding: 23px 20px;
+  cursor: pointer;
+  -webkit-transform-origin: 32px 24px;
+  -ms-transform-origin: 32px 24px;
+  transform-origin: 32px 24px;
+}
+
+.navicon div {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.87);
+}
+
+.navicon div:before,
+.navicon div:after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.87);
+  position: absolute;
+}
+
+.navicon div:before { top: -7px; }
+
+.navicon div:after { top: 7px; }
+// MIXINS
+//Dummy Variable
+$x = false;
+// The top, left, right, and bottom are optional
+setup(display, position, margin, top = null, right = null, bottom = null, left = null)  
+    display display
+    position position
+    margin margin
+    top top
+    left left
+    right right
+    bottom bottom
+        
+font(font-family, font-size, letter-spacing, font-weight, line-height = 1)
+    font-family font-family
+    font-size font-size
+    letter-spacing letter-spacing
+    font-weight font-weight
+    line-height line-height
+        
+// GENERAL FONTS AND CLASSES AND SETUP STUFF
+* {box-sizing: border-box; transition: 0.35s ease;}
+    
+.rela-block
+    setup(block, relative, auto)
+.rela-inline
+    setup(inline-block, relative, auto)
+.floated
+    setup(inline-block, relative, $x)
+    float left
+    
+.abs-center
+    setup($x, absolute, $x, 50%, $x, $x, 50%)
+    transform translate(-50%, -50%)
+    text-align center
+    width 88%
+    
+// --- COLORS ---
+
+// --- PAGE STYLINGS ---
+body
+    font('Open Sans',18px,0px,400,28px)
+    background: url('http://kingofwallpapers.com/leaves/leaves-016.jpg') right no-repeat
+    background-size: cover
+    &:before
+        content ""
+        setup($x,fixed,0,0,0,0,0)
+        background-color rgba(255,255,255,0.92)
+    
+.caps {text-transform: uppercase;}
+.justified {text-align: justify;}
+p.light {color: #777;}
+h2 {font('Open Sans',30px,5px,600,40px); color: black}
+h3 {font('Open Sans',21px,1px,600,28px); color: black}
+    
+.page
+    width 90%
+    max-width 1200px
+    margin 80px auto
+    background-color white
+    box-shadow 6px 10px 28px 0px rgba(0,0,0,0.4)
+    
+.top-bar
+    height 220px
+    background-color #848484
+    color white
+    
+.name
+    setup($x,absolute,$x,$x,0,0,calc(350px + 5%))
+    height 120px
+    text-align center
+    font('Raleway',58px,8px,100,60px)
+    & div {width: 94%}
+    
+.side-bar
+    setup($x,absolute,$x,60px,$x,0,5%)
+    width 350px
+    background-color #F7E0C1
+    padding 320px 30px 50px
+        
+.mugshot
+    setup($x,absolute,$x,50px,$x,$x,70px)
+    height 210px
+    width 210px
+    & .logo {margin: -23px;}
+    
+.logo
+    $midSize = 250px;    // Controls overall size
+    setup($x,absolute,$x,0,$x,$x,0)
+    z-index 100
+    margin 0
+    color black
+    height $midSize
+    width $midSize
+    & .logo-svg
+        height 100%
+        width 100%
+        stroke black
+        cursor pointer
+    & .logo-text
+        setup($x, absolute, $x, 58%, 16%)
+        cursor pointer
+        font("Montserrat", $midSize/5 + $midSize/50, 0px, 400, $midSize/5 + $midSize/30)
+
+.social
+    padding-left 60px
+    margin-bottom 20px
+    cursor pointer
+    &:before
+        content ""
+        setup($x,absolute,$x,-4px,$x,$x,10px)
+        height 35px
+        width 35px
+        background-size cover !important
+    &.twitter:before{background: url('https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Twitter-07-128.png') center no-repeat}
+    &.pinterest:before{background: url('https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Pinterest-23-128.png') center no-repeat}
+    &.linked-in:before{background: url('https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_LinkedIn-128.png') center no-repeat;}
+        
+.side-header
+    font('Open Sans',18px,4px,600,28px)
+    margin 60px auto 10px
+    padding-bottom 5px
+    border-bottom 1px solid #888
+    
+.list-thing {padding-left: 25px; margin-bottom: 10px}
+        
+.content-container
+    margin-right 0
+    width calc(95% - 350px)
+    padding 25px 40px 50px
+    & > * {margin: 0 auto 25px}
+    & > h3 {margin: 0 auto 5px}
+    & > p.long-margin {margin: 0 auto 50px}
+
+.title{width: 80%; text-align: center}
+
+.separator
+    width 240px
+    height 2px
+    background-color #999
+    
+.greyed
+    background-color #DDD
+    width 100%
+    max-width 580px
+    text-align center
+    font('Open Sans',18px,6px,600,28px)
+    
+@media screen and (max-width: 1150px)
+    .name {color: white; font('Raleway',38px,6px,100,48px)}
